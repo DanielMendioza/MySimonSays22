@@ -19,7 +19,7 @@ Game::Game() :
 	m_redButton{ sf::Vector2f{ 200.0f, 200.0f }},
 	m_exitGame{false} //when true game will exit
 {
-	
+	setupSimonSaysButtons();
 }
 
 /// <summary>
@@ -104,6 +104,13 @@ void Game::update(sf::Time t_deltaTime)
 /// </summary>
 void Game::render()
 {
-	m_window.clear(sf::Color::Cyan);
+	m_window.clear(sf::Color::Black);
+	m_window.draw(m_redButton);
 	m_window.display();
+}
+
+void Game::setupSimonSaysButtons()
+{
+	m_redButton.setFillColor(sf::Color(249, 7, 22, 255));
+	m_redButton.setPosition(570.0f, 30.0f);
 }
