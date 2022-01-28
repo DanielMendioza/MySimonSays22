@@ -15,8 +15,11 @@
 /// load and setup thne image
 /// </summary>
 Game::Game() :
-	m_window{ sf::VideoMode{ 800U, 600U, 32U }, "Simon Says 2k22" },
-	m_redButton{ sf::Vector2f{ 200.0f, 200.0f }},
+	m_window{ sf::VideoMode{ 1200U, 900U, 32U }, "Simon Says 2k22" },
+	m_redButton{ sf::Vector2f{ 200.0f, 200.0f } },
+	m_blueButton{ sf::Vector2f{ 200.0f, 200.0f } },
+	m_yellowButton{sf::Vector2f{ 200.0f, 200.0f } },
+	m_greenButton{sf::Vector2f{ 200.0f, 200.0f } },
 	m_exitGame{false} //when true game will exit
 {
 	setupSimonSaysButtons();
@@ -106,6 +109,9 @@ void Game::render()
 {
 	m_window.clear(sf::Color::Black);
 	m_window.draw(m_redButton);
+	m_window.draw(m_blueButton);
+	m_window.draw(m_yellowButton);
+	m_window.draw(m_greenButton);
 	m_window.display();
 }
 
@@ -113,4 +119,20 @@ void Game::setupSimonSaysButtons()
 {
 	m_redButton.setFillColor(sf::Color(249, 7, 22, 255));
 	m_redButton.setPosition(570.0f, 30.0f);
+
+	m_blueButton.setFillColor(sf::Color(43, 115, 240, 255));
+	m_blueButton.setPosition(570.0f, 250.0f);
+
+	m_yellowButton.setFillColor(sf::Color(255, 233, 33, 255));
+	m_yellowButton.setPosition(790.0f, 30.0f);
+
+	m_greenButton.setFillColor(sf::Color(50, 205, 50, 255));
+	m_greenButton.setPosition(790.0f, 250.0f);
+
+	//this next comment is for a later use
+	/*m_yellowButton.setPointCount(5);
+	m_yellowButton.setRadius(100.0f);
+	m_yellowButton.setFillColor(sf::Color(255, 242, 0, 255));
+	m_yellowButton.setPosition(790.0f, 30.0f);*/
+
 }

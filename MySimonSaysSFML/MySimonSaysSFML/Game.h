@@ -32,6 +32,10 @@ private:
 
 	sf::RenderWindow m_window; // main SFML window
 	sf::RectangleShape m_redButton;// makes existence of red button a reality
+	sf::RectangleShape m_blueButton;// makes existence of blue button not just a fantasy
+	sf::RectangleShape m_yellowButton;// makes existence of yellow button 
+	sf::RectangleShape m_greenButton;//makes existence of green button , do you feel like a god?
+	//sf::CircleShape m_yellowButton;
 	bool m_exitGame; // control exiting game
 
 };
